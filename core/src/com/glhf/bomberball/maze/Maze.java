@@ -182,7 +182,7 @@ public class Maze{
     }
 
     private static FileHandle getFileHandleMulti(String name) {
-        FileHandle fh = Gdx.files.external(Constants.PATH_MAZECUSTOM+ name + ".json");
+        FileHandle fh = Gdx.files.local(Constants.PATH_MAZECUSTOM+ name + ".json");
         if(!fh.exists()){
             fh = Gdx.files.internal(Constants.PATH_MAZE+ "multi/" + name + ".json");
             if(!fh.exists()){
@@ -204,7 +204,7 @@ public class Maze{
     }
 
     public void exportCustomMaze(String name) {
-        File file = Gdx.files.external(Constants.PATH_MAZECUSTOM + name + ".json").file();
+        File file = Gdx.files.local(Constants.PATH_MAZECUSTOM + name + ".json").file();
         if(!file.getParentFile().exists()) file.getParentFile().mkdirs();
         writeToFile(file);
     }

@@ -57,7 +57,7 @@ Construit avec :
 	
 Remerciements : 
 ---------------
-	- Monsieur MOREAU et PICOGNALA de nous avoir proposé de mener ce projet.
+	- Monsieur MOREAU et PICOGNA de nous avoir proposé de mener ce projet.
 	- Tous les testeurs qui ont répondu à notre appel.
 	- Les IMR3 qui nous ont aidé à bien débuter et qui sont venus nous donner leurs précieux conseils lors de la session de test.
 	- Vous qui jouez à ce jeu et qui avez lu ce README jusqu'au bout !

@@ -1,11 +1,11 @@
 
 
-                                                                         
-		,-----.                   ,--.                 ,-----.          ,--.,--. 
-		|  |) /_  ,---. ,--,--,--.|  |-.  ,---. ,--.--.|  |) /_  ,--,--.|  ||  | 
-		|  .-.  \| .-. ||        || .-. '| .-. :|  .--'|  .-.  \' ,-.  ||  ||  | 
-		|  '--' /' '-' '|  |  |  || `-' |\   --.|  |   |  '--' /\ '-'  ||  ||  | 
-		`------'  `---' `--`--`--' `---'  `----'`--'   `------'  `--`--'`--'`--' 
+
+		,-----.                   ,--.                 ,-----.          ,--.,--.
+		|  |) /_  ,---. ,--,--,--.|  |-.  ,---. ,--.--.|  |) /_  ,--,--.|  ||  |
+		|  .-.  \| .-. ||        || .-. '| .-. :|  .--'|  .-.  \' ,-.  ||  ||  |
+		|  '--' /' '-' '|  |  |  || `-' |\   --.|  |   |  '--' /\ '-'  ||  ||  |
+		`------'  `---' `--`--`--' `---'  `----'`--'   `------'  `--`--'`--'`--'
 --------------------
 Version: 1.0
 Auteur: Équipe GLHF
@@ -19,16 +19,16 @@ Merci d'avoir choisi de jouer au jeu BomberBall développé par l'équipe GLHF !
 Prérequis :
 -----------
 Pour lancer notre jeu vous aurez besoin d'avoir installé la version 8 de java (https://www.java.com/fr/download/).
-				                                                         
-Installation :
+
+## Lancement du jeu :
 --------------
 	Linux :
 	-------
-Lancer le fichier .jar
+java -jar BomberBall.jar
 
 	Windows :
 	---------
-Lancer le fichier .jar
+java -Dfile.encoding=UTF-8 -jar BomberBall.jar
 
 
 Bugs connus :

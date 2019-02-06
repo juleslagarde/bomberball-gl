@@ -1,8 +1,8 @@
 package com.glhf.bomberball.screens;
 
 import com.badlogic.gdx.utils.Timer;
+import com.badlogic.gdx.utils.Timer.Task;
 import com.glhf.bomberball.Bomberball;
-import com.glhf.bomberball.InputHandler.Action;
 import com.glhf.bomberball.config.GameStoryConfig;
 import com.glhf.bomberball.gameobject.*;
 import com.glhf.bomberball.maze.Maze;
@@ -74,12 +74,10 @@ public class GameStoryScreen extends GameScreen {
             return;
         }
 
-        for (Enemy enemy : enemies) {
-            if (enemy.isAlive()) {
-                enemy.initiateTurn();
-                enemy.followWay();
-            }
-        }
+        for (Enemy e : enemies)  if(e.isAlive())  e.initiateTurn();
+
+        stepEnemies();
+
 
         try {
             current_player.initiateTurn();
@@ -94,6 +92,27 @@ public class GameStoryScreen extends GameScreen {
 
         } catch (RuntimeException e) {
             System.out.println("The player probably died");
+        }
+    }
+
+    private void stepEnemies() {
+        boolean oneHasStep = false;
+        for (Enemy enemy : enemies) {
+            if (enemy.isAlive()) {
+                if (enemy.canStep()) {
+                    enemy.step();
+                    oneHasStep = true;
+                }
+            }
+        }
+        if(oneHasStep){
+            Timer.schedule(new Task() {
+                @Override
+                public void run() {
+                    stepEnemies();
+                }
+            }, 0.1f);
+            Timer.instance().
         }
     }
 

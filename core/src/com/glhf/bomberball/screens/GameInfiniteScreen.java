@@ -1,6 +1,5 @@
 package com.glhf.bomberball.screens;
 
-import com.badlogic.gdx.Game;
 import com.badlogic.gdx.utils.Timer;
 import com.glhf.bomberball.Bomberball;
 import com.glhf.bomberball.config.GameInfiniteConfig;
@@ -92,12 +91,17 @@ public class GameInfiniteScreen extends GameScreen {
                 return;
             }
 
-            for (Enemy enemy : enemies) {
-                if (enemy.isAlive()) {
-                    enemy.initiateTurn();
-                    enemy.followWay();
+            boolean oneHasStep = false;
+            do{
+                for (Enemy enemy : enemies) {
+                    if (enemy.isAlive()) {
+                        enemy.initiateTurn();
+                        if(enemy.canStep()){
+                            enemy.step();
+                        }
+                    }
                 }
-            }
+            } while(oneHasStep);
 
             try {
                 current_player.initiateTurn();

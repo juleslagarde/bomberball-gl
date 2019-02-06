@@ -1,14 +1,10 @@
 package com.glhf.bomberball.gameobject;
 
-import com.badlogic.gdx.utils.Timer;
-import com.badlogic.gdx.utils.Timer.Task;
 import com.glhf.bomberball.maze.MazeTransversal;
 import com.glhf.bomberball.maze.cell.Cell;
 import com.glhf.bomberball.utils.Directions;
-import com.glhf.bomberball.utils.Node;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 public abstract class Enemy extends Character {
 
@@ -57,19 +53,16 @@ public abstract class Enemy extends Character {
     }
 
     /**
-     * the enemy has to follow the way he receveid
+     * the enemy has to follow the way he received
+     * @return if enemy can step further
      */
-    public void followWay() {
-        if (moves_remaining > 0 && !way.isEmpty()) {
-            this.move(way.get(actual_move));
-            actual_move = (actual_move + 1) % way.size();
-            Timer.schedule(new Task() {
-                @Override
-                public void run() {
-                    followWay();
-                }
-            }, 0.1f);
-        }
+    public void step() {
+        this.move(way.get(actual_move));
+        actual_move = (actual_move + 1) % way.size();
+    }
+
+    public boolean canStep() {
+        return moves_remaining > 0 && !way.isEmpty();
     }
 
 

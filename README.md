@@ -4,7 +4,7 @@
 
 **Autheur: Équipe GLHF**
 
-**Bomberball**est un jeu tour par tour où vous pourrez jouer seul ou avec des amis ! Il dispose d'un mode histoire, d'un mode infini dans lequel vous pourrez essayer de vous dépasser pour obtenir le meilleur score !
+**Bomberball** est un jeu tour par tour où vous pourrez jouer seul ou avec des amis ! Il dispose d'un mode histoire, d'un mode infini dans lequel vous pourrez essayer de vous dépasser pour obtenir le meilleur score !
 Profitez également, avec vos amis, du mode multijoueur sur des labyrinthes préfaits ou sur un labyrinthe que vous aurez entièrement créé grâce à notre éditeur de labyrinthe.
 
 ## Prérequis :
